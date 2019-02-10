@@ -65,7 +65,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 13vw 0;
+    padding: 3vw 0;
     max-width: 70%;
     margin: auto;
     text-align: center;
@@ -98,7 +98,7 @@ body {
 
 .page-head-title {
     margin: 0;
-    font-size: 4.2rem;
+    font-size: 3.6rem;
     color: var(--color-base);
 }
 @media (max-width: 500px) {
@@ -718,4 +718,28 @@ body {
 .page-template .post-content-body h2,
 .page-template .post-content-body h3 {
     text-align: center;
+}
+
+.home-section-container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 300px);
+}
+
+.home-subliner {
+    font-size: 1.6em;
+    text-align: center;
+    margin: auto;
+}
+
+.home-section {
+    margin: 0 auto;
+}
+
+.home-section-icon {
+    width: 48px;
+    height: 48px;
+    margin: auto;
+    display: block;
 }

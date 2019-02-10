@@ -3,19 +3,44 @@
 into the {body} of the default.hbs template --}}
 
 {{#is "home"}}
-    {{#if @site.description}}
-    <header class="page-head">
-        <h2 class="page-head-title">{{@site.description}}</h2>
-    </header>
-    {{/if}}
-{{/is}}
+{{#if @site.description}}
+<header class="page-head">
+    <h2 class="page-head-title">{{@site.description}}</h2>
+</header>
+{{/if}}
 
-<div class="post-feed">
+<div class="home-subliner">
     {{#foreach posts}}
-
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card"}}
-
+        {{#has tag="home-subliner"}}
+            {{content}}
+        {{/has}}
     {{/foreach}}
 </div>
 
+<script type="text/javascript" src="https://mautic.agileninja.io/form/generate.js?id=1"></script>
+
+<div class="home-section-container">
+<div class="home-section">
+    {{#foreach posts}}
+        {{#has tag="home-section-1"}}
+            {{content}}
+        {{/has}}
+    {{/foreach}}
+</div>
+<div class="home-section">
+    {{#foreach posts}}
+        {{#has tag="home-section-2"}}
+            {{content}}
+        {{/has}}
+    {{/foreach}}
+</div>
+<div class="home-section">
+    {{#foreach posts}}
+        {{#has tag="home-section-3"}}
+            {{content}}
+        {{/has}}
+    {{/foreach}}
+</div>
+</div>
+
+{{/is}}

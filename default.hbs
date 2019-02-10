@@ -24,13 +24,6 @@
 
         <header class="site-head">
             <div class="site-head-container">
-                <a class="nav-burger" href="#">
-                    <div class="hamburger hamburger--collapse" aria-label="Menu" role="button" aria-controls="navigation">
-                        <div class="hamburger-box">
-                            <div class="hamburger-inner"></div>
-                        </div>
-                    </div>
-                </a>
                 <nav id="swup" class="site-head-left">
                     {{navigation}}
                 </nav>
@@ -49,7 +42,7 @@
                         {{#if @site.twitter}}
                         <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
                         {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener"></a>
                     </div>
                 </div>
             </div>
@@ -66,7 +59,7 @@
 
         {{!-- The footer at the very bottom of the screen --}}
         <footer class="site-foot">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> &mdash; Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>
         </footer>
 
     </div>
